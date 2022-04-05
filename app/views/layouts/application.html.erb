@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Istok+Web&display=swap" rel="stylesheet" />
+    <%# <link href="./css/style.css" rel="stylesheet" /> %>
+    <div class="header-top">
     <title>ReceiptApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header class="header">
+      <div class="inner">
+        <div class="nav">
+          <div class="nav__left">
+          <%= link_to image_tag("receitap_icon.png", class: :logo) %>
+          </div>
+        </div>
+      </div>
+    </header>
     <%= yield %>
+    <footer class="footer">
+      <p class="copyright">Copyright © RECEIPTAP All rights reserved.</p>
+    </footer>
   </body>
 </html>
