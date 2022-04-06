@@ -1,22 +1,23 @@
+<%# <%= render "shared/header" %> 
 
-<body>
-
-<div class="v1_2">
-<div class="back_color">
+<div class="main">
+  <div class="inner">
+    <div class="form__wrapper">
+      <h2>領収書の管理を管単に！<br>楽々  領収書の画像を保存するだけ！</h2>
+      <%= link_to "ログイン", new_user_session_path, class: :form__btn %>
+      <%= link_to "新規登録はこちら", new_user_registration_path, class: :newuser %>
+        <%# <div class="newuser">新規登録はこちら</div> %>
+        <div class="password_reset">パスワードを再設定する場合はこちら</div>
+        
+      </div>
+    </div>
+  </div>
 </div>
-<div class="v17_2"></div>
 
-<span class="top_line">領収書の管理を管単に！</span>
 
-<div class="name_box"></div>
-<span class="name_line">名前</span>
-<span class="password_line">パスワード</span>
-<div class="password_box"></div>
-<div class="login_box"></div>
-<span class="login_line">ログイン</span>
-<span class="password_reset">パスワードを再設定する場合はこちら</span>
-<span class="newuser">新規登録はこちら</span>
-</div>
-</div>
-</body>
-</html>
+  
+
+  
+
+    
+
