@@ -1,6 +1,6 @@
 class Receipt < ApplicationRecord
   validates :comment, presence: true
-  validates :day, presence: true
+  validates :date, presence: true
   validates :image, presence: true
 
   belongs_to :user
@@ -10,6 +10,4 @@ class Receipt < ApplicationRecord
 
   validates :category_id, numericality: { other_than: 1 }
   belongs_to :category
-
-
 end

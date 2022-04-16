@@ -1,23 +1,44 @@
-<%# <%= render "shared/header" %> 
-
-<div class="main">
+<header class="header">
   <div class="inner">
-    <div class="form__wrapper">
-      <h2>領収書の管理を管単に！<br>楽々  領収書の画像を保存するだけ！</h2>
-      <%= link_to "ログイン", new_user_session_path, class: :form__btn %>
-      <%= link_to "新規登録はこちら", new_user_registration_path, class: :newuser %>
-        <%# <div class="newuser">新規登録はこちら</div> %>
-        <div class="password_reset">パスワードを再設定する場合はこちら</div>
-        
+    <div class="nav">
+      <div class="user01"><a href="/">RECEIPTAP</a></div>
+        <div class="user02">
+          <% if user_signed_in? %>
+            <%= current_user.name %>
+            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</header>
 
 
+
+<body class="body2">
+<div class="main-text">領収書一覧</div>
+    <% if @receipts [0] == nil %>
+      
+      <div class="receipt-name2">
+      <%=link_to '領収書を保存してください。', new_receipt_path %>
+      </div>
+
+    <% end %>
+  <ul class="container">
   
-
-  
-
-    
+<%# <% @peceipt.each do |receipt| %> %>
+  <li class="article">
+    <div class="receipt-category">
+      <%# <%= receipts.category %> %>
+    </div>
+    <div class="article-title">
+      <%# <%= receipts.image %> %>
+    </div>
+    <div class="article-text">
+      <%# <%= receipts.comment %> %>
+    </div>
+  </li>
+<%# <% end %> %>
+  </ul>
+</body>
 

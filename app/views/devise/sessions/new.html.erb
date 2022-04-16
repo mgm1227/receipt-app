@@ -1,25 +1,44 @@
-<div class="main">
-  <div class="inner">
-    <div class="form__wrapper">
-      <h2>ユーザーログイン</h2>
-        <%# 「モデル名」にはUserモデルであれば@userを渡しましょう。%>
-        <%# 「ログイン機能へのパス」は、devise導入後にrails routesを実行してdevise/sessions#createへのパスを確認し、記載してください。 %>
-        <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+<body class="body2">
+  <header class="user01">
+    RECIPTAP
+  </header>
+  <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+  <div class="wrap">
+    <div class="container">
+      <div class="login-box">
+        <h1>ログイン</h1><br>
+        <form action>
+          <table class="loginTable">
+            <tbody>
+            <%# 変更 %>
+            
+             <%# <% render 'shared/error_messages', model: f.object %> 
+            <%# <div class="field">
+              <%= f.label :name, "氏名" %><br />
+              <%# <%= f.text_field :name, class:"form-contl",id:"user_name", autofocus: true, placeholder:"山田太郎" %>
+            <%# </div> %>
 
-        <div class="field">
-          <%= f.label :name, "お名前" %><br />
-          <%= f.email_field :name, id:"user_name", autofocus: true, autocomplete: "name" %>
-        </div>
+            <div class="field">
+              <%= f.label :email, "メールアドレス" %><br />
+              <%= f.email_field :email, class:"form-contl", id:"user_email", placeholder:"a@com" %>
+            </div>
 
-        <div class="field">
-          <%= f.label :password, "パスワード（6文字以上）" %><br />
-          <%= f.password_field :password, id:"user_password", autocomplete: "current-password" %>
-        </div>
+              <div class="field">
+                <%= f.label :password, "パスワード" %>
+                <%= f.password_field :password, class:"form-contl", id:"user_password", placeholder: "パスワードは英数字６文字以上です。" %>
+              </div>
 
-        <div class="actions">
-          <%= f.submit "ログイン", class: :form__btn %>
-        </div>
-      <% end %>
-    </div>
+              <div class="actions">
+                <%= f.submit "ログイン", class:'animoDepthButton'%>
+              </div>
+
+              <%= render "devise/shared/links" %>
+
+               <% end %>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>     
   </div>
-</div>
+</body>

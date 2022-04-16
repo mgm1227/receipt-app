@@ -12,17 +12,10 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <%# <p class="notice"><%= notice %></p> 
+  <%# <p class="alert"><%= alert %></p> 
 
-  <body>
-    <header class="header">
-      <div class="inner">
-        <div class="nav">
-          <div class="nav__left">
-          <%= link_to image_tag("receitap_icon.png", class: :logo) %>
-          </div>
-        </div>
-      </div>
-    </header> 
+  <body> 
     <%= yield %>
     <footer class="footer">
       <p class="copyright">Copyright © RECEIPTAP All rights reserved.</p>

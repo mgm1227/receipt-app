@@ -1,0 +1,64 @@
+<header class="header">
+  <div class="inner">
+    <div class="nav">
+      <div class="user01"><a href="/">RECEIPTAP</a></div>
+      </div>
+    </div>
+  </div>
+</header>
+<%= form_with model: @receipt, local: true do |f| %>
+<body class="main">
+  <div class="inner">
+    <div class="receipt-main">
+        <div class="receipt-title">領収証を保存する</div>
+        
+
+        <%= render 'layouts/error_messages', model: f.object  %>
+
+          <%# 領収書保存 %>
+      <div class="img-upload">
+        <div class="weight-text">
+          領収画像
+          <span class="indispensable">必須</span>
+        </div>
+        <div class="click-upload">
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image, id:"receipt-image" %>
+        </div>
+      </div>
+        <%# /商品画像 %>
+
+      <div class="new-items">
+      <div class="weight-text">
+        日付<span class="indispensable">必須</span><br>
+        <%= f.date_field :date, class: 'date-edit' %>
+      </div>
+
+        <div class="weight-text">
+          コメント
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :comment, class:"items-text", id:"comment", placeholder:"領収内容（必須 40文字まで)", maxlength:"40" %>
+      </div>
+
+      <div class="items-detail">
+            <div class="form">
+              <div class="weight-text">
+                カテゴリー
+                <span class="indispensable">必須</span>
+              </div>
+              <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"category"}) %>
+            </div>
+      </div>
+      <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "保存する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+      <% end %>
+    </div>
+  </div>
+</body>

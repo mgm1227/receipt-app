@@ -23,46 +23,14 @@ body {
 
 a {
   text-decoration: none;
+  color: rgb(30, 30, 30);
 }
 
-
-/* ヘッダー */
-
-.header {
-  width: 100%;
-  height: 100px;
-  background: rgba(255,238,213,1);
-   opacity: 1; /* 要素の不透明度 */
-}
-.inner {
-  width: 1024px;
-  margin: 0 auto;
-}
-
-.nav {
-  width: 100%;
-  top: 50%;
-  display: flex;
-  justify-content: space-between;
-}
-
-h2 {
-  width: 400px;
-  position: absolute;
-  /* margin: 150px, 0, 555px, ; */
-  top: 150px;
-  left: 555px;
-  font-size: 30px;
-  opacity: 1;
-  text-align: center;
-}
 
 
 /* フォームまわり */
 .form__wrapper{
- 
   min-height: calc(100vh - 161px);
- 
 }
 
 .form__text {
@@ -87,7 +55,7 @@ h2 {
   height: 41px;
   border: 1px rgba(40,90,200,1) solid;
   position: absolute;
-  top: 400px;
+  top: 50%;
   left: 669px;
   font-size: 16px;
   color: rgba(40,90,200,1);
@@ -161,13 +129,97 @@ h2 {
 .newuser:hover {
   color: #87CEFA;
 }
-.footer {
-  background-color: rgba(255,238,213,1);
-  padding: 20px 0;
 
+/* 新規投稿 */
+
+.receipt-main {
+  width: 70vw;
+  min-width: 450px;
+  padding: 10vh 15vw;
+}
+
+.receipt-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.indispensable {
+  margin-left: 8px;
+  padding: 3px;
+  color: rgb(195, 103, 103);
+  font-size: 12px;
+}
+
+.weight-text {
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+/* 商品画像 */
+.img-upload {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2vh 0;
+}
+
+.click-upload {
+  margin: 15px 0;
+  min-width: 250px;
+}
+
+.click-upload>p {
+  margin-bottom: 15px;
+}
+
+/* /商品画像 */
+/* 商品名と商品説明 */
+.new-items {
+  padding: 2vh 0;
+}
+
+.items-text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+.items-explain {
+  margin-top: 2vh;
+}
+
+/* /商品名と商品説明 */
+
+/* 商品の詳細など */
+.items-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 0;
+}
+
+.items-detail>.form {
+  width: 300px;
+  padding: 2vh 0;
+}
+
+.select-box {
+  margin: 1vh 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* /商品の詳細など */
+
+/* フッター */
+.footer {
+  padding: 20px 0;
 }
 .copyright {
   text-align: center;
-  color: #FB7D79;
+  color: orange;
   font-size: 10px;
 }

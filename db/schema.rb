@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2022_04_06_022642) do
     t.bigint "user_id", null: false
     t.integer "category_id", null: false
     t.text "comment"
-    t.integer "date", null: false
+    t.date "date", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_receipts_on_user_id"
