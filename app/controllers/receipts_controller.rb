@@ -3,7 +3,8 @@ class ReceiptsController < ApplicationController
 
   def index
     @receipts = Receipt.all
-    # @receipts = Receipt.includes(:user).order("created_at DESC")
+    # @receipts = Receipt.where(user_id: current.user_id)includes(:user).order("created_at DESC")
+    # 投稿した人＝ログインしているユーザーのみ表示
   end
 
   def new
@@ -32,6 +33,6 @@ class ReceiptsController < ApplicationController
   private
 
   def receipt_params
-    params.require(:receipt).permit(:image, :date, :comment, :category_id)
+    params.require(:receipt).permit(:image, :date, :comment, :category_id).merge(user_id: current_user.id)
   end
 end

@@ -6,6 +6,6 @@ class User < ApplicationRecord
 
   has_many :receipts
 
-  validates :name, presence: true, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }
+  validates :name, presence: true
   
 end

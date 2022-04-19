@@ -1,19 +1,29 @@
 
-.article{
+.receipt{
   height: auto;
-  background-color: lightgray;
+  
+  /* background-color: rgb(241, 230, 211); */
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: 1px solid #fff;
+  border: 1px solid #ccc;
   padding: 20px;
+}
+
+.receipt-date{
+  font-size: 16px;
+}
+
+.receipt-text{
+  font-size: 16px;
 }
 
 .receipt-category{
   font-size: 16px;
   border: 1px solid;
   padding: 5px;
-  /* background-color: lightblue; */
+  border-radius: 4px;
+  background-color: whitesmoke;
 }
 
 .article-title{

@@ -17,28 +17,31 @@
 
 <body class="body2">
 <div class="main-text">領収書一覧</div>
-    <% if @receipts [0] == nil %>
-      
+
       <div class="receipt-name2">
       <%=link_to '領収書を保存してください。', new_receipt_path %>
       </div>
 
+          <%# 領収書一覧 %>
+    <% @receipts.each do |receipt| %>
+      <ul class="container">
+        <li class="receipt">
+        <div class="receipt-date">
+        領収日
+        <%= receipt.date %>
+        </div>
+          <div>
+            <%= image_tag(receipt.image) %>
+          </div>
+          <div class="receipt-category">
+            <%= receipt.category.name %>
+          </div>
+          領収内容
+          <div class="receipt-text">
+            <%= receipt.comment %>
+          </div>
+        </li>
+      </ul>
     <% end %>
-  <ul class="container">
-  
-<%# <% @peceipt.each do |receipt| %> %>
-  <li class="article">
-    <div class="receipt-category">
-      <%# <%= receipts.category %> %>
-    </div>
-    <div class="article-title">
-      <%# <%= receipts.image %> %>
-    </div>
-    <div class="article-text">
-      <%# <%= receipts.comment %> %>
-    </div>
-  </li>
-<%# <% end %> %>
-  </ul>
 </body>
 
