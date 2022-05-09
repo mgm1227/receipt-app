@@ -6,13 +6,13 @@
     </div>
   </div>
 </header>
-<%= form_with model: @receipt, local: true do |f| %>
+
 <body class="main">
   <div class="inner">
     <div class="receipt-main">
         <div class="receipt-title">領収証を保存する</div>
-        
-
+        <%= form_with model: @receipt, local: true do |f| %>
+    
         <%= render 'layouts/error_messages', model: f.object  %>
 
           <%# 領収書保存 %>

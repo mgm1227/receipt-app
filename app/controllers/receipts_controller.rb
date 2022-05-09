@@ -21,13 +21,28 @@ class ReceiptsController < ApplicationController
     end
   end
 
-  def show
-  end
 
   def edit
+    @receipt = Receipt.find(params[:id])
+    if user_signed_in? && current_user.id != @receipt.user_id
+    redirect_to receipts_path
+    end
   end
 
+  def update
+    @receipt = Receipt.find(params[:id])
+    if @receipt.update(receipt_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+  
+
   def destroy
+    @receipt = Receipt.find(params[:id])
+    @receipt.destroy
+    redirect_to receipts_path
   end
 
   private
@@ -35,4 +50,5 @@ class ReceiptsController < ApplicationController
   def receipt_params
     params.require(:receipt).permit(:image, :date, :comment, :category_id).merge(user_id: current_user.id)
   end
+
 end

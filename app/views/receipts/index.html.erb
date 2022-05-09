@@ -31,7 +31,7 @@
         <%= receipt.date %>
         </div>
           <div>
-            <%= image_tag(receipt.image) %>
+            <%=link_to image_tag(receipt.image), edit_receipt_path(receipt.id) %>
           </div>
           <div class="receipt-category">
             <%= receipt.category.name %>
@@ -40,6 +40,7 @@
           <div class="receipt-text">
             <%= receipt.comment %>
           </div>
+          <%= link_to "削除する", receipt_path(receipt.id), method: :delete %>
         </li>
       </ul>
     <% end %>
