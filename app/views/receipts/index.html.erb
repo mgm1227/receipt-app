@@ -19,8 +19,10 @@
 <div class="main-text">領収書一覧</div>
 
       <div class="receipt-name2">
-      <%=link_to '領収書を保存してください。', new_receipt_path %>
+      <%=link_to '領収書を保存', new_receipt_path, class: :save_btn %>
+      <br>
       </div>
+      <br>
 
           <%# 領収書一覧 %>
     <% @receipts.each do |receipt| %>
@@ -40,7 +42,7 @@
           <div class="receipt-text">
             <%= receipt.comment %>
           </div>
-          <%= link_to "削除する", receipt_path(receipt.id), method: :delete %>
+          <%= link_to " 削除する ", receipt_path(receipt.id), method: :delete, class: :dele_btn %>
         </li>
       </ul>
     <% end %>
