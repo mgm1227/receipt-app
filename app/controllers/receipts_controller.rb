@@ -13,7 +13,7 @@ class ReceiptsController < ApplicationController
 
   def create
     @receipt = Receipt.new(receipt_params)
-    
+
     if @receipt.save
       redirect_to root_path
     else
@@ -21,12 +21,9 @@ class ReceiptsController < ApplicationController
     end
   end
 
-
   def edit
     @receipt = Receipt.find(params[:id])
-    if user_signed_in? && current_user.id != @receipt.user_id
-    redirect_to receipts_path
-    end
+    redirect_to receipts_path if user_signed_in? && current_user.id != @receipt.user_id
   end
 
   def update
@@ -37,7 +34,6 @@ class ReceiptsController < ApplicationController
       render :edit
     end
   end
-  
 
   def destroy
     @receipt = Receipt.find(params[:id])
@@ -50,5 +46,4 @@ class ReceiptsController < ApplicationController
   def receipt_params
     params.require(:receipt).permit(:image, :date, :comment, :category_id).merge(user_id: current_user.id)
   end
-
 end
