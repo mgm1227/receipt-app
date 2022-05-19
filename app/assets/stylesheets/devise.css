@@ -1,7 +1,4 @@
-h1{
-  text-align: center;
-  color: #333;
-}
+
 
 
 .body2 {
@@ -95,9 +92,6 @@ table {
   border-collapse: collapse;
     border-spacing: 0;
 }
- /* tr {
-  margin: 0 0 20 0;
-}  */
 
 th {
   padding: 5px;

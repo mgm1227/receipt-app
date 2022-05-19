@@ -26,6 +26,26 @@ a {
   color: rgb(30, 30, 30);
 }
 
+h1{
+  text-align: center;
+  color: #333;
+}
+
+h2 {
+  width: 400px;
+  position: absolute;
+  /* margin: 150px, 0, 555px, ; */
+  top: 150px;
+  left: 555px;
+  font-size: 30px;
+  opacity: 1;
+  text-align: center;
+}
+
+ul {
+  list-style:none;
+}
+
 
 
 /* フォームまわり */

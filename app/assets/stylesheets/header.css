@@ -16,13 +16,3 @@
   justify-content: space-between;
 }
 
-h2 {
-  width: 400px;
-  position: absolute;
-  /* margin: 150px, 0, 555px, ; */
-  top: 150px;
-  left: 555px;
-  font-size: 30px;
-  opacity: 1;
-  text-align: center;
-}
