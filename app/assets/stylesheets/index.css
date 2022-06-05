@@ -2,7 +2,7 @@
 .receipt{
   height: auto;
   
-  /* background-color: rgb(241, 230, 211); */
+  /* background-color: rgba(241, 230, 211); */
   display: flex;
   align-items: center;
   flex-direction: column;
