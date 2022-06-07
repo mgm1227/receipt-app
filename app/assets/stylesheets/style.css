@@ -17,13 +17,13 @@ div {
 body {
   font-size: 15px;
   font-family: Istok Web;
-  color: rgba(69,69,69,1);
+  color: #454545;
   font-weight: Regular;
 }
 
 a {
   text-decoration: none;
-  color: rgba(30, 30, 30);
+  color: #1e1e1e;
 }
 
 h1{
@@ -34,7 +34,6 @@ h1{
 h2 {
   width: 400px;
   position: absolute;
-  /* margin: 150px, 0, 555px, ; */
   top: 150px;
   left: 555px;
   font-size: 30px;
@@ -68,87 +67,6 @@ ul {
   margin-bottom: 40px;
 }
 
-.form__btn {
-  display: inline-block;
-  padding: 0.5em 1.1em;
-  width: 102px;
-  height: 41px;
-  border: 1px rgba(40,90,200,1) solid;
-  position: absolute;
-  top: 50%;
-  left: 669px;
-  font-size: 16px;
-  color: rgba(40,90,200,1);
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
-  text-decoration: none;
-}
-
-.form__btn:hover{
-  color: #fff;
-  background: #87CEFA;
-}
-
-.name_box {
-  width: 153px;
-  height: 22px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
-  position: absolute;
-  top: 222px;
-  left: 667px;
-  border: 0.5px solid rgba(69,69,69,1);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-}
-.name_line {
-  width: 32px;
-  position: absolute;
-  top: 222px;
-  left: 618px;
-  opacity: 1;
-  text-align: left;
-}
-.password_line {
-  width: 80px;
-  position: absolute;
-  top: 271px;
-  left: 570px;
-  opacity: 1;
-  text-align: right;
-}
-.password_box {
-  width: 153px;
-  height: 22px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
-  position: absolute;
-  top: 271px;
-  left: 667px;
-  border: 0.5px solid rgba(69,69,69,1);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-}
-.password_reset {
-  width: 255px;
-  color: rgba(69,69,69,1);
-  position: absolute;
-  top: 500px;
-  left: 592px;
-  opacity: 1;
-  text-align: left;
-}
-.newuser {
-  width: 120px;
-  color: rgba(40,90,200,1);
-  position: absolute;
-  top: 450px;
-  left: 660px;
-  opacity: 1;
-  text-align: left;
-}
-.newuser:hover {
-  color: #87CEFA;
-}
 
 /* 新規投稿 */
 
@@ -168,7 +86,7 @@ ul {
 .indispensable {
   margin-left: 8px;
   padding: 3px;
-  color: rgba(195, 103, 103);
+  color: indianred;
   font-size: 12px;
 }
 
