@@ -42,6 +42,7 @@
           <div class="receipt-text">
             <%= receipt.comment %>
           </div>
+          <%= link_to " 編集する ", edit_receipt_path(receipt.id), method: :get, class: :edit_btn %>
           <%= link_to " 削除する ", receipt_path(receipt.id), method: :delete, class: :dele_btn %>
         </li>
       </ul>

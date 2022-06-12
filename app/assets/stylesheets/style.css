@@ -161,3 +161,14 @@ ul {
   color: orange;
   font-size: 10px;
 }
+
+/* タブレット表示時 */
+@media (max-width: 1024px){
+  h1 {
+    font-size: 20px;
+  }
+
+  .receipt-main {
+    width: 100%;
+  }
+}

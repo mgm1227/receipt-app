@@ -36,8 +36,8 @@
 }
 
 .container {
-  margin-right: 250px;
-    margin-left: 250px;
+  margin-right: 300px;
+    margin-left: 300px;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -105,4 +105,31 @@ th {
   color:#87CEFA;
   transform:translateY(-1px);
   box-shadow:0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08)
+}
+
+/* タブレット表示時 */
+@media (max-width: 1024px){
+  .body2 {
+    width: 100%;
+  }
+
+  .user01 {
+    width: 50%;
+    font-size: 30px;
+    text-align: center;
+  }
+  .user02 {
+    width: 50%;
+    font-size: 18px;
+  }
+  
+  .wrap {
+    width: 100%;
+  }
+
+  .container {
+    margin: auto;
+    width: 50%;
+    font-size: 14px;
+  }
 }
