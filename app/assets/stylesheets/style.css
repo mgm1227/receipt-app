@@ -172,3 +172,14 @@ ul {
     width: 100%;
   }
 }
+
+/* スマホ表示時 */
+@media (max-width: 500px){
+  h1 {
+    font-size: 18px;
+  }
+
+  .receipt-main {
+    width: 100%;
+  }
+}

@@ -133,3 +133,30 @@ th {
     font-size: 14px;
   }
 }
+
+/* スマホ表示時 */
+@media (max-width: 500px){
+  .body2 {
+    width: 80%;
+  }
+
+  .user01 {
+    width: 50%;
+    font-size: 30px;
+    text-align: center;
+  }
+  .user02 {
+    width: 50%;
+    font-size: 18px;
+  }
+  
+  .wrap {
+    width: 100%;
+  }
+
+  .container {
+    margin: auto;
+    width: 50%;
+    font-size: 14px;
+  }
+}

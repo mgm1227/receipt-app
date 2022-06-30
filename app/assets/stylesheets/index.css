@@ -99,3 +99,10 @@
   }
 }
 
+/* スマホ表示 */
+@media (max-width: 500px){
+  .receipt {
+    width: 100%;
+  }
+}
+
