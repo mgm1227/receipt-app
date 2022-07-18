@@ -11,7 +11,7 @@
   <div class="inner">
     <div class="receipt-main">
         <div class="receipt-title">領収証を保存する</div>
-        <%= form_with model: @receipt, local: true do |f| %>
+        <%= form_with model: @receipt, id: 'new_post', local: true do |f| %>
     
         <%= render 'layouts/error_messages', model: f.object  %>
 
@@ -25,10 +25,11 @@
           <p>
             クリックしてファイルをアップロード
           </p>
+          <div id="previews"></div>
           <%= f.file_field :image, id:"receipt-image" %>
         </div>
       </div>
-        <%# /商品画像 %>
+        <%# /領収画像 %>
 
       <div class="new-items">
       <div class="weight-text">
